@@ -17,8 +17,8 @@ class App extends Component {
     score: 0,
     topScore: 0,
     showAlert: 0,
-    showSuccuess: 0
-    clickedimages: []
+    showSuccess: 0,
+    clickedImages: []
   };
 
   clickedImage = id => {
@@ -32,13 +32,34 @@ class App extends Component {
     if (clickedImages.indexOf(id) === -1) {
       clickedImages.push(id);
       console.log(clickedImages);
-      this.incrementScore();
+      this.handleIncrement();
       this.shuffleImages();
-    }
+    } else if (this.state.score === 10) {
+      this.setState({
+        showSuccuss: 1,
+        score: 0,
+        clickedImages : []
+      });
+    } else {
+      this.setState({
+        score: 0,
+        clickedImages: []
+      });
+      console.log("Clicked twice!");
+      this.setState({
+        showAlert: 1
+      });
+    };
+
+    if (score > topScore) {
+      this.setState({
+        topScore: score
+      });
+    };
   }
 
-  incrementScore = () => {
-    this.stateState({
+  handleIncrement = () => {
+    this.setState({
       score: this.state.score + 1
     });
   };
@@ -49,6 +70,35 @@ class App extends Component {
     });
   };
 
+  render() {
+    return (
+      <div className="container">
+        <div className="alert alert-danger" style={{ opacity: this.state.showAlert }} >
+          Oops! You've already clicked this! Please try again.
+        </div>
+        <div className="alert alert-success" style={{ opacity: this.state.showSuccess }} >
+          Great memory! You haven't clicked any duplicates!
+        </div>
+        <ScoreCount
+          title="Memory Game with the Avengers"
+          score={this.state.score}
+          topScore={this.state.topScore}
+        />
+        <div className="row">
+          {this.state.images.map(image => (
+            <Image
+              key={image.id}
+              id={image.id}
+              character={image.character}
+              title={image.character}
+              image={image.image}
+              clickedImage={this.clickedImage}
+            />  
+          ))}
+        </div>
+      </div>
+    );
+  };
 }
 
 export default App;

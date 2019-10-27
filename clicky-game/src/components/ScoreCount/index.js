@@ -5,7 +5,7 @@ function ScoreCount(props) {
   return (
     <header className="scoreCount">
       <div className="row">
-        <div className="col-md-6 col-left">
+        <div className="col-md-3 col-left">
           <h5>{props.character}</h5>
         </div>
         <div className="col-md-3 col-right">
