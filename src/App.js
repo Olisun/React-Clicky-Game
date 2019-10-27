@@ -3,7 +3,8 @@ import images from "./images.json";
 import ScoreCount from "./components/ScoreCount";
 import Image from "./components/Image";
 
-function shuffle(array) {
+// Function for shuffling the array of images defined in images.json. 
+ const shuffle = array => {
   for (let i = array.length - 1; i >= 0; i--) {
     const randIndex = Math.floor(Math.random() * (i + 1));
     [array[i], array[randIndex]] = [array[randIndex], array[i]]
@@ -11,24 +12,28 @@ function shuffle(array) {
   return array;
 }
 
+// Bringing in the components. 
 class App extends Component {
+  // Setting initial state (basically defining the variables). 
   state = {
     images,
     score: 0,
-    topScore: 0,
+    highScore: 0,
     showAlert: 0,
     showSuccess: 0,
     clickedImages: []
   };
 
+  // This links the event-handler function in the Image component t0 the variables declared above.
   clickedImage = id => {
+    // clickedImages is an empty array for images the user clicks once. 
     let clickedImages = this.state.clickedImages;
     let score = this.state.score;
-    let topScore = this.state.topScore;
+    let highScore = this.state.highScore;
     this.setState({
       showAlert: 0
     });
-
+    // if the clicked image is clicked, then push the image id into the clickedImages array; increment the score and run the shuffle function.
     if (clickedImages.indexOf(id) === -1) {
       clickedImages.push(id);
       console.log(clickedImages);
@@ -45,31 +50,32 @@ class App extends Component {
         score: 0,
         clickedImages: []
       });
-      console.log("Clicked twice!");
+      // this shows the "Oops" message defined below
       this.setState({
         showAlert: 1
       });
     };
-
-    if (score > topScore) {
+    // if the current score is greater than the high score, then that score becomes the high score. 
+    if (score > highScore) {
       this.setState({
-        topScore: score
+        highScore: score
       });
     };
   }
-
+  // Incrementing the score count
   handleIncrement = () => {
     this.setState({
       score: this.state.score + 1
     });
   };
-
+  // Calling the shuffle function defined above. 
   shuffleImages = () => {
     this.setState({
       images: shuffle(images)
     });
   };
 
+  // Rendering everything to the DOM. 
   render() {
     return (
       <div className="container">
@@ -79,12 +85,14 @@ class App extends Component {
         <div className="alert alert-success" style={{ opacity: this.state.showSuccess }} >
           Great memory! You haven't clicked any duplicates!
         </div>
+        {/* Bringing in the ScoreCount function from the ScoreCount component with the dynamic score count defined above */}
         <ScoreCount
           title="Memory Game with the Avengers"
           score={this.state.score}
-          topScore={this.state.topScore}
+          highScore={this.state.highScore}
         />
         <div className="row">
+          {/* Using the map method to map in the key-value-pairs from images.json */}
           {this.state.images.map(image => (
             <Image
               key={image.id}

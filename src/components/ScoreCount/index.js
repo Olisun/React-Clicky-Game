@@ -1,18 +1,23 @@
 import React from "react";
 import "./style.css";
 
-function ScoreCount(props) {
+// Defining the ScoreCount component. 
+const ScoreCount = props => {
   return (
+    // Adding static content in the header section for title, high score, current score and a brief description.
     <header className="scoreCount">
       <div className="row">
+        <div className="col-md-3 col-left">
+          <h5>{props.title}</h5>
+        </div>  
         <div className="col-md-3 col-left">
           <h5>{props.character}</h5>
         </div>
         <div className="col-md-3 col-right">
-          <h5>High Score: {props.score}</h5>
+          <h5>Current Score: {props.score}</h5>
         </div>
         <div className="col-md-3 col-right">
-          <h5>Current Score: {props.topScore}</h5>
+          <h5>High Score: {props.highScore}</h5>
         </div>
       </div>
       <div className="row">
