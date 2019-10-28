@@ -2,7 +2,7 @@
   "name": "React-Clicky-Game",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/Olisun/React-Clicky-Game",
+  "homepage": "https://olisun.github.io/React-Clicky-Game/",
   "dependencies": {
     "gh-pages": "^2.1.1",
     "react": "^16.11.0",
