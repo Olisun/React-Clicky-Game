@@ -3,7 +3,7 @@ import images from "./images.json";
 import ScoreCount from "./components/ScoreCount";
 import Image from "./components/Image";
 
-// Function for shuffling the array of images defined in images.json. 
+// Function for shuffling the array of images defined in images.json (applied from shuffling a deck of cards from class). 
  const shuffle = array => {
   for (let i = array.length - 1; i >= 0; i--) {
     const randIndex = Math.floor(Math.random() * (i + 1));
@@ -24,7 +24,7 @@ class App extends Component {
     clickedImages: []
   };
 
-  // This links the event-handler function in the Image component t0 the variables declared above.
+  // This links the event-handler function in the Image component to the variables declared above.
   clickedImage = id => {
     // clickedImages is an empty array for images the user clicks once. 
     let clickedImages = this.state.clickedImages;
@@ -33,7 +33,7 @@ class App extends Component {
     this.setState({
       showAlert: 0
     });
-    // if the clicked image is clicked, then push the image id into the clickedImages array; increment the score and run the shuffle function.
+    // if the clicked image is clicked and it's not found in the array (what the "===-1" states), then push the image id into the clickedImages array. increment the score and run the shuffle function. 
     if (clickedImages.indexOf(id) === -1) {
       clickedImages.push(id);
       console.log(clickedImages);
@@ -45,6 +45,7 @@ class App extends Component {
         score: 0,
         clickedImages : []
       });
+    // if the user clicks the same image again, since it's already in the array (from the previous click), the score is reset to 0.
     } else {
       this.setState({
         score: 0,
