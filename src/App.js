@@ -20,7 +20,7 @@ class App extends Component {
     score: 0,
     highScore: 0,
     showAlert: 0,
-    showSuccess: 0,
+    showWins: 0,
     clickedImages: []
   };
 
@@ -41,7 +41,7 @@ class App extends Component {
       this.shuffleImages();
     } else if (this.state.score === 10) {
       this.setState({
-        showSuccuss: 1,
+        showWins: 1,
         score: 0,
         clickedImages : []
       });
@@ -82,7 +82,7 @@ class App extends Component {
         <div className="alert alert-danger" style={{ opacity: this.state.showAlert }} >
           Oops! You've already clicked this! Please try again.
         </div>
-        <div className="alert alert-success" style={{ opacity: this.state.showSuccess }} >
+        <div className="alert alert-success" style={{ opacity: this.state.showWins }} >
           Great memory! You haven't clicked any duplicates!
         </div>
         {/* Bringing in the ScoreCount function from the ScoreCount component with the dynamic score count defined above */}

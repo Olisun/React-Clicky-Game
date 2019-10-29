@@ -1,52 +1,52 @@
 [
   {
     "id": 1,
-    "image": "../build/images/banner.png",
+    "image": "./images/banner.png",
     "character": "Bruce Banner"
   },
   {
     "id": 2,
-    "image": "../build/images/blackpanther.png",
+    "image": "./images/blackpanther.png",
     "character": "Black Panther"
   },
   {
     "id": 3,
-    "image": "../build/images/cap.png",
+    "image": "./images/cap.png",
     "character": "Steve Rodgers"
   },
   {
     "id": 4,
-    "image": "../build/images/danvers.png",
+    "image": "./images/danvers.png",
     "character": "Carol Danvers"
   },
   {
     "id": 5,
-    "image": "../build/images/doc.png",
+    "image": "./images/doc.png",
     "character": "Dr Strange"
   },
   {
     "id": 6,
-    "image": "../build/images/falcon.png",
+    "image": "./images/falcon.png",
     "character": "Falcon"
   },
   {
     "id": 7,
-    "image": "../build/images/gamora.png",
+    "image": "./images/gamora.png",
     "character": "Gamora"
   },
   {
     "id": 8,
-    "image": "../build/images/hulk.png",
+    "image": "./images/hulk.png",
     "character": "Hulk"
   },
   {
     "id": 9,
-    "image": "../build/images/parker.png",
+    "image": "./images/parker.png",
     "character": "Peter Parker"
   },
   {
     "id": 10,
-    "image": "../build/images/shuri.png",
+    "image": "./images/shuri.png",
     "character": "Shuri"
   },
   {
@@ -56,17 +56,17 @@
   },
   {
     "id": 12,
-    "image": "../build/images/starlord.png",
+    "image": "./images/starlord.png",
     "character": "Star Lord"
   },
   {
     "id": 13,
-    "image": "../build/images/thor.png",
+    "image": "./images/thor.png",
     "character": "Thor"
   },
   {
     "id": 14,
-    "image": "../build/images/wanda.png",
+    "image": "./images/wanda.png",
     "character": "Wanda Maximoff"
   }
 ]
