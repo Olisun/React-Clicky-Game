@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/Olisun/React-Clicky-Game/static/css/main.4069582e.chunk.css",
-    "main.js": "/Olisun/React-Clicky-Game/static/js/main.791af76f.chunk.js",
-    "main.js.map": "/Olisun/React-Clicky-Game/static/js/main.791af76f.chunk.js.map",
-    "runtime-main.js": "/Olisun/React-Clicky-Game/static/js/runtime-main.47676907.js",
-    "runtime-main.js.map": "/Olisun/React-Clicky-Game/static/js/runtime-main.47676907.js.map",
-    "static/js/2.84306225.chunk.js": "/Olisun/React-Clicky-Game/static/js/2.84306225.chunk.js",
-    "static/js/2.84306225.chunk.js.map": "/Olisun/React-Clicky-Game/static/js/2.84306225.chunk.js.map",
-    "index.html": "/Olisun/React-Clicky-Game/index.html",
-    "precache-manifest.cfcc0de9352b27858c9feace3ecde91f.js": "/Olisun/React-Clicky-Game/precache-manifest.cfcc0de9352b27858c9feace3ecde91f.js",
-    "service-worker.js": "/Olisun/React-Clicky-Game/service-worker.js",
-    "static/css/main.4069582e.chunk.css.map": "/Olisun/React-Clicky-Game/static/css/main.4069582e.chunk.css.map"
+    "main.css": "/React-Clicky-Game/static/css/main.4069582e.chunk.css",
+    "main.js": "/React-Clicky-Game/static/js/main.c8ae00a9.chunk.js",
+    "main.js.map": "/React-Clicky-Game/static/js/main.c8ae00a9.chunk.js.map",
+    "runtime-main.js": "/React-Clicky-Game/static/js/runtime-main.08df5299.js",
+    "runtime-main.js.map": "/React-Clicky-Game/static/js/runtime-main.08df5299.js.map",
+    "static/js/2.84306225.chunk.js": "/React-Clicky-Game/static/js/2.84306225.chunk.js",
+    "static/js/2.84306225.chunk.js.map": "/React-Clicky-Game/static/js/2.84306225.chunk.js.map",
+    "index.html": "/React-Clicky-Game/index.html",
+    "precache-manifest.427dbaf5cc7c4597a3b3c42397b3bdc5.js": "/React-Clicky-Game/precache-manifest.427dbaf5cc7c4597a3b3c42397b3bdc5.js",
+    "service-worker.js": "/React-Clicky-Game/service-worker.js",
+    "static/css/main.4069582e.chunk.css.map": "/React-Clicky-Game/static/css/main.4069582e.chunk.css.map"
   },
   "entrypoints": [
-    "static/js/runtime-main.47676907.js",
+    "static/js/runtime-main.08df5299.js",
     "static/js/2.84306225.chunk.js",
     "static/css/main.4069582e.chunk.css",
-    "static/js/main.791af76f.chunk.js"
+    "static/js/main.c8ae00a9.chunk.js"
   ]
 }
